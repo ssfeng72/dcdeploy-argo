@@ -3,357 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophia • The Love of Wisdom</title>
+    <title>World History Overview</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
-        
-        :root {
-            --bg: #0f0f0f;
-            --accent: #d4af37;
-            --text: #e8e8e8;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        
         header {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-                        url('https://source.unsplash.com/random/1920x1080/?ancient-library') center/cover no-repeat;
-            position: relative;
         }
-        
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-        
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-            letter-spacing: 4px;
-        }
-        
-        .subtitle {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-        
-        .scroll-hint {
-            position: absolute;
-            bottom: 40px;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20% { transform: translateY(0); }
-            50% { transform: translateY(15px); }
-        }
-        
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--accent);
-        }
-        
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 100px 2rem;
-        }
-        
-        section {
-            margin-bottom: 120px;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: var(--accent);
-            position: relative;
-            display: inline-block;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 2px;
-            background: var(--accent);
-            bottom: -10px;
-            left: 0;
-        }
-        
-        .intro-text {
-            font-size: 1.35rem;
-            max-width: 700px;
-            margin-bottom: 3rem;
-        }
-        
-        .philosopher-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .card {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 8px;
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-        
-        .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
-        }
-        
-        .card h3 {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .quote {
-            font-style: italic;
-            border-left: 4px solid var(--accent);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            opacity: 0.9;
-        }
-        
-        .branches {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .branch {
-            padding: 2rem;
-            background: #1a1a1a;
-            border-radius: 8px;
-        }
-        
-        footer {
-            background: #0a0a0a;
-            padding: 4rem 2rem 2rem;
+            background: #34495e;
+            padding: 10px;
             text-align: center;
-            border-top: 1px solid #333;
         }
-        
-        .footer-quote {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.8;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Philosophia</div>
-            <div class="nav-links">
-                <a href="#ancient">Ancient</a>
-                <a href="#branches">Branches</a>
-                <a href="#thinkers">Thinkers</a>
-                <a href="#quotes">Wisdom</a>
-            </div>
-        </div>
-    </nav>
 
-    <header>
-        <div class="hero-content">
-            <h1>PHILOSOPHIA</h1>
-            <p class="subtitle">The Love of Wisdom</p>
-            <p style="max-width: 500px; margin: 0 auto; opacity: 0.85;">
-                "Wonder is the beginning of wisdom." — Socrates
-            </p>
-            <div class="scroll-hint">SCROLL TO EXPLORE ↓</div>
-        </div>
-    </header>
+<header>
+    <h1>World History</h1>
+    <p>A Journey Through Time</p>
+</header>
 
-    <main>
-        <!-- Introduction -->
-        <section id="introduction">
-            <h2>What is Philosophy?</h2>
-            <p class="intro-text">
-                Philosophy is the study of fundamental questions about existence, knowledge, values, reason, mind, and language. 
-                It is not merely an academic discipline, but a way of life — a continuous pursuit of understanding ourselves and the universe.
-            </p>
-            <p style="max-width: 700px; opacity: 0.9;">
-                From the bustling streets of ancient Athens to modern digital forums, humans have always asked the big questions: 
-                <strong>What is the good life?</strong> <strong>How do we know what we know?</strong> <strong>What is real?</strong>
-            </p>
-        </section>
+<nav>
+    <a href="#ancient">Ancient</a>
+    <a href="#medieval">Medieval</a>
+    <a href="#modern">Modern</a>
+</nav>
 
-        <!-- Ancient Thinkers -->
-        <section id="ancient">
-            <h2>Foundations of Western Thought</h2>
-            <div class="philosopher-grid">
-                <div class="card">
-                    <h3>Socrates (c. 470–399 BCE)</h3>
-                    <p>The father of Western philosophy. Through relentless questioning, he taught that the unexamined life is not worth living.</p>
-                    <div class="quote">"I know that I know nothing."</div>
-                </div>
-                <div class="card">
-                    <h3>Plato (c. 428–348 BCE)</h3>
-                    <p>Student of Socrates. Founded the Academy and explored the world of ideal Forms in works like <em>The Republic</em>.</p>
-                    <div class="quote">"The heaviest penalty for declining to rule is to be ruled by someone worse than yourself."</div>
-                </div>
-                <div class="card">
-                    <h3>Aristotle (c. 384–322 BCE)</h3>
-                    <p>Student of Plato. His empirical approach laid the groundwork for the scientific method and logic.</p>
-                    <div class="quote">"We are what we repeatedly do. Excellence, then, is not an act, but a habit."</div>
-                </div>
-            </div>
-        </section>
+<div class="container">
 
-        <!-- Branches of Philosophy -->
-        <section id="branches">
-            <h2>Major Branches of Philosophy</h2>
-            <div class="branches">
-                <div class="branch">
-                    <h3>Metaphysics</h3>
-                    <p>The study of reality and existence. What is being? What is the nature of time and space?</p>
-                </div>
-                <div class="branch">
-                    <h3>Epistemology</h3>
-                    <p>The theory of knowledge. How do we know what we know? What distinguishes justified belief from opinion?</p>
-                </div>
-                <div class="branch">
-                    <h3>Ethics</h3>
-                    <p>The study of morality and values. How should we live? What makes actions right or wrong?</p>
-                </div>
-                <div class="branch">
-                    <h3>Logic</h3>
-                    <p>The study of valid reasoning and argumentation. The foundation of clear thinking.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modern Thinkers -->
-        <section id="thinkers">
-            <h2>Modern Voices</h2>
-            <div class="philosopher-grid">
-                <div class="card">
-                    <h3>Immanuel Kant (1724–1804)</h3>
-                    <p>"Act only according to that maxim whereby you can at the same time will that it should become a universal law."</p>
-                </div>
-                <div class="card">
-                    <h3>Friedrich Nietzsche (1844–1900)</h3>
-                    <p>"He who fights with monsters might take care lest he thereby become a monster."</p>
-                </div>
-                <div class="card">
-                    <h3>Simone de Beauvoir (1908–1986)</h3>
-                    <p>"One is not born, but rather becomes, a woman."</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Wisdom Quotes -->
-        <section id="quotes">
-            <h2>Timeless Wisdom</h2>
-            <div style="max-width: 800px; margin: 0 auto; font-size: 1.35rem; line-height: 2.2; text-align: center; opacity: 0.95;">
-                <p style="margin-bottom: 3rem;">
-                    "The only true wisdom is in knowing you know nothing."<br>
-                    <strong>— Socrates</strong>
-                </p>
-                <p style="margin-bottom: 3rem;">
-                    "Happiness is not something ready made. It comes from your own actions."<br>
-                    <strong>— Dalai Lama</strong>
-                </p>
-                <p>
-                    "To live is to suffer, to survive is to find some meaning in the suffering."<br>
-                    <strong>— Friedrich Nietzsche</strong>
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p class="footer-quote">
-            "Philosophy is the microscope of thought." — Victor Hugo
+    <div class="section" id="ancient">
+        <h2>Ancient History</h2>
+        <p>
+            Ancient history covers the earliest civilizations such as Mesopotamia, Egypt, Greece, and Rome. 
+            These societies laid the foundations for modern governance, philosophy, and science.
         </p>
-        <p>&copy; 2026 Philosophia • A simple exploration of wisdom</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.6;">
-            Built as a single HTML page • Feel free to modify and expand
+        <ul>
+            <li>Mesopotamia - Cradle of Civilization</li>
+            <li>Ancient Egypt - Pyramids and Pharaohs</li>
+            <li>Ancient Greece - Democracy and Philosophy</li>
+            <li>Roman Empire - Law and Engineering</li>
+        </ul>
+    </div>
+
+    <div class="section" id="medieval">
+        <h2>Medieval History</h2>
+        <p>
+            The medieval period, also known as the Middle Ages, lasted from the 5th to the 15th century. 
+            It was marked by feudalism, the rise of kingdoms, and the influence of religion.
         </p>
-    </footer>
+        <ul>
+            <li>Feudal System</li>
+            <li>The Crusades</li>
+            <li>The Black Death</li>
+            <li>Growth of Trade and Cities</li>
+        </ul>
+    </div>
 
-    <script>
-        // Simple smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+    <div class="section" id="modern">
+        <h2>Modern History</h2>
+        <p>
+            Modern history begins around the 16th century and includes major global transformations such as 
+            the Renaissance, Industrial Revolution, and World Wars.
+        </p>
+        <ul>
+            <li>Renaissance - Cultural Rebirth</li>
+            <li>Industrial Revolution - Technological Growth</li>
+            <li>World War I & II</li>
+            <li>Globalization and Digital Age</li>
+        </ul>
+    </div>
 
-        // Add subtle scroll effect to header
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                document.querySelector('nav').style.background = 'rgba(15, 15, 15, 0.98)';
-            }
-        });
-    </script>
+</div>
+
+<footer>
+    <p>&copy; 2026 World History Project</p>
+</footer>
+
 </body>
 </html>
